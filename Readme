@@ -1,0 +1,7 @@
+Run answer-validation.ts
+
+- npx ts-node questionValidation/answer-validation.ts
+
+Run question.ts
+
+- node personalizedProfile/questionaire.js

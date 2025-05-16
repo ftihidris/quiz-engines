@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "Write a function to return the sum of two numbers.",
+    "solutions": {
+      "swift": "func add(_ a: Int, _ b: Int) -> Int {\n    return a + b\n}",
+      "java": "public int add(int a, int b) {\n    return a + b;\n}",
+      "cpp": "int add(int a, int b) {\n    return a + b;\n}",
+      "python": "def add(a, b):\n    return a + b"
+    },
+    "hint": "Use the '+' operator to add the two numbers."
+  },
+  {
+    "id": 2,
+    "question": "Write a function to check if a number is even.",
+    "solutions": {
+      "swift": "func isEven(_ number: Int) -> Bool {\n    return number % 2 == 0\n}",
+      "java": "public boolean isEven(int number) {\n    return number % 2 == 0;\n}",
+      "cpp": "bool isEven(int number) {\n    return number % 2 == 0;\n}",
+      "python": "def is_even(number):\n    return number % 2 == 0"
+    },
+    "hint": "Use the modulus operator (%) to check if the remainder is zero when divided by 2."
+  },
+  {
+    "id": 3,
+    "question": "Write a function to find the maximum of three numbers.",
+    "solutions": {
+      "swift": "func maxOfThree(_ a: Int, _ b: Int, _ c: Int) -> Int {\n    return max(a, max(b, c))\n}",
+      "java": "public int maxOfThree(int a, int b, int c) {\n    return Math.max(a, Math.max(b, c));\n}",
+      "cpp": "int maxOfThree(int a, int b, int c) {\n    return std::max(a, std::max(b, c));\n}",
+      "python": "def max_of_three(a, b, c):\n    return max(a, b, c)"
+    },
+    "hint": "Use the built-in max function or conditional statements."
+  },
+  {
+    "id": 4,
+    "question": "Write a function to reverse a string.",
+    "solutions": {
+      "swift": "func reverse(_ str: String) -> String {\n    return String(str.reversed())\n}",
+      "java": "public String reverse(String str) {\n    return new StringBuilder(str).reverse().toString();\n}",
+      "cpp": "#include <algorithm>\n#include <string>\n\nstd::string reverse(const std::string& str) {\n    std::string reversed = str;\n    std::reverse(reversed.begin(), reversed.end());\n    return reversed;\n}",
+      "python": "def reverse(s):\n    return s[::-1]"
+    },
+    "hint": "Use string reversal methods or reverse iterators."
+  },
+  {
+    "id": 5,
+    "question": "Write a function to check if a string is a palindrome.",
+    "solutions": {
+      "swift": "func isPalindrome(_ str: String) -> Bool {\n    return str == String(str.reversed())\n}",
+      "java": "public boolean isPalindrome(String str) {\n    return str.equals(new StringBuilder(str).reverse().toString());\n}",
+      "cpp": "#include <algorithm>\n#include <string>\n\nbool isPalindrome(const std::string& str) {\n    return str == std::string(str.rbegin(), str.rend());\n}",
+      "python": "def is_palindrome(s):\n    return s == s[::-1]"
+    },
+    "hint": "Compare the string with its reversed version."
+  },
+  {
+    "id": 6,
+    "question": "Write a function to calculate the factorial of a number.",
+    "solutions": {
+      "swift": "func factorial(_ n: Int) -> Int {\n    return n == 0 ? 1 : n * factorial(n - 1)\n}",
+      "java": "public int factorial(int n) {\n    return (n == 0) ? 1 : n * factorial(n - 1);\n}",
+      "cpp": "int factorial(int n) {\n    return (n == 0) ? 1 : n * factorial(n - 1);\n}",
+      "python": "def factorial(n):\n    return 1 if n == 0 else n * factorial(n - 1)"
+    },
+    "hint": "Use recursion or a loop to multiply numbers from 1 to n."
+  },
+  {
+    "id": 7,
+    "question": "Write a function to find the nth Fibonacci number.",
+    "solutions": {
+      "swift": "func fibonacci(_ n: Int) -> Int {\n    return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2)\n}",
+      "java": "public int fibonacci(int n) {\n    return (n <= 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);\n}",
+      "cpp": "int fibonacci(int n) {\n    return (n <= 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);\n}",
+      "python": "def fibonacci(n):\n    return n if n <= 1 else fibonacci(n - 1) + fibonacci(n - 2)"
+    },
+    "hint": "Use recursion or iteration based on the Fibonacci sequence definition."
+  },
+  {
+    "id": 8,
+    "question": "Write a function to count the number of vowels in a string.",
+    "solutions": {
+      "swift": "func countVowels(_ str: String) -> Int {\n    return str.lowercased().filter { \"aeiou\".contains($0) }.count\n}",
+      "java": "public int countVowels(String str) {\n    str = str.toLowerCase();\n    int count = 0;\n    for (char c : str.toCharArray()) {\n        if (\"aeiou\".indexOf(c) != -1) count++;\n    }\n    return count;\n}",
+      "cpp": "int countVowels(const std::string& str) {\n    int count = 0;\n    for (char c : str) {\n        c = tolower(c);\n        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') count++;\n    }\n    return count;\n}",
+      "python": "def count_vowels(s):\n    return sum(1 for c in s.lower() if c in 'aeiou')"
+    },
+    "hint": "Loop through the string and count characters that are vowels."
+  },
+  {
+    "id": 9,
+    "question": "Write a function to find the largest element in an array.",
+    "solutions": {
+      "swift": "func findMax(_ arr: [Int]) -> Int? {\n    return arr.max()\n}",
+      "java": "public int findMax(int[] arr) {\n    int max = arr[0];\n    for (int i = 1; i < arr.length; i++) {\n        if (arr[i] > max) max = arr[i];\n    }\n    return max;\n}",
+      "cpp": "#include <vector>\nint findMax(const std::vector<int>& arr) {\n    int max = arr[0];\n    for (int i = 1; i < arr.size(); i++) {\n        if (arr[i] > max) max = arr[i];\n    }\n    return max;\n}",
+      "python": "def find_max(arr):\n    return max(arr)"
+    },
+    "hint": "Iterate through the array while keeping track of the maximum."
+  },
+  {
+    "id": 10,
+    "question": "Write a function to calculate the average of numbers in an array.",
+    "solutions": {
+      "swift": "func average(_ arr: [Double]) -> Double {\n    return arr.reduce(0, +) / Double(arr.count)\n}",
+      "java": "public double average(double[] arr) {\n    double sum = 0;\n    for (double num : arr) {\n        sum += num;\n    }\n    return sum / arr.length;\n}",
+      "cpp": "#include <vector>\ndouble average(const std::vector<double>& arr) {\n    double sum = 0;\n    for (double num : arr) {\n        sum += num;\n    }\n    return sum / arr.size();\n}",
+      "python": "def average(arr):\n    return sum(arr) / len(arr)"
+    },
+    "hint": "Sum all elements and divide by the array's length."
+  }
+]
